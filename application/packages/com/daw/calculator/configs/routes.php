@@ -26,8 +26,8 @@
  * if expires is set, then it will be cached [0 | empty ==> not cached]
  */
 return array(
-    'calculator_index_index' => array(
-        'path'              => '/calculator/index',
+    'com_calculator_controllers_index_index' => array(
+        'path'              => '/calculator/index/',
         'controller'        => 'index',
         'action'            => 'index',
     ),

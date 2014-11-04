@@ -14,7 +14,7 @@
  * file that was distributed with this source code.
  */
 
-namespace main;
+namespace com\daw\calculator;
 
 use bootstrap\AppBootstrap;
 

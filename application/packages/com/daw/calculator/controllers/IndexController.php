@@ -6,7 +6,7 @@
  * Time: 15:28
  */
 
-namespace com\daw\calculator;
+namespace com\daw\calculator\controllers;
 
 use xen\mvc\Controller;
 
@@ -16,4 +16,4 @@ class IndexController extends Controller
     {
         $this->render();
     }
-} 
+}
