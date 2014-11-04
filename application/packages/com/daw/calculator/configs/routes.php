@@ -27,8 +27,13 @@
  */
 return array(
     'com_calculator_controllers_index_index' => array(
-        'path'              => '/calculator/index/',
+        'path'              => '/calculator/index',
         'controller'        => 'index',
         'action'            => 'index',
+    ),
+    'com_calculator_controllers_index_doSum' => array(
+        'path'              => '/calculator/add',
+        'controller'        => 'index',
+        'action'            => 'add',
     ),
 );

@@ -16,4 +16,9 @@ class IndexController extends Controller
     {
         $this->render();
     }
+
+    public function addAction()
+    {
+        $this->render();
+    }
 }
