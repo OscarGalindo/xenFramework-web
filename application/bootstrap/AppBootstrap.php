@@ -20,5 +20,12 @@ use xen\kernel\bootstrap\BootstrapBase;
 
 class AppBootstrap extends BootstrapBase
 {
-
+    protected function _initLayout()
+    {
+        $layout = $this->_container->getResource('Layout');
+        $request = $this->_container->getResource('Request');
+        $layout->url_segments = explode('/', $request->getUrl());
+        $layout->url = $request->getUrl();
+        return $layout;
+    }
 }

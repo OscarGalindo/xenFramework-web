@@ -9,6 +9,7 @@
 namespace com\daw\calculator\controllers;
 
 use xen\mvc\Controller;
+use xen\http\Request;
 
 class IndexController extends Controller
 {

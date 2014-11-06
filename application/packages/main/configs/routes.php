@@ -26,7 +26,7 @@
  * if expires is set, then it will be cached [0 | empty ==> not cached]
  */
 return array(
-    'main_controllers_index_index' => array(
+    'index' => array(
         'path'              => '/',
         'controller'        => 'index',
         'action'            => 'index',
