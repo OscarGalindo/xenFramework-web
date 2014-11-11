@@ -9,17 +9,18 @@
 namespace com\daw\calculator\controllers;
 
 use xen\mvc\Controller;
-use xen\http\Request;
 
 class IndexController extends Controller
 {
     public function indexAction()
     {
+        $this->_layout->title = 'Index calculadora';
         $this->render();
     }
 
     public function addAction()
     {
+        $this->_layout->title = 'Suma';
         $this->render();
     }
 }

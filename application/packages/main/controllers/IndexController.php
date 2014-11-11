@@ -22,6 +22,7 @@ class IndexController extends Controller
 {
     public function indexAction()
     {
+        $this->_layout->title = 'Index';
         $this->render();
     }
 } 
