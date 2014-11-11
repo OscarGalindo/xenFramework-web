@@ -17,6 +17,7 @@
 namespace bootstrap;
 
 use xen\kernel\bootstrap\BootstrapBase;
+use xen\mvc\view\Phtml;
 
 class AppBootstrap extends BootstrapBase
 {
@@ -24,6 +25,13 @@ class AppBootstrap extends BootstrapBase
     {
         $layout = $this->_container->getResource('Layout');
         $request = $this->_container->getResource('Request');
+
+        $partials   = array(
+            'header' => new Phtml($this->_container->getResource('LayoutPath') . DIRECTORY_SEPARATOR . 'header.phtml'),
+            'footer' => new Phtml($this->_container->getResource('LayoutPath') . DIRECTORY_SEPARATOR . 'footer.phtml'),
+        );
+
+        $layout->addPartials($partials);
         $layout->url_segments = explode('/', $request->getUrl());
         $layout->url = $request->getUrl();
         return $layout;
