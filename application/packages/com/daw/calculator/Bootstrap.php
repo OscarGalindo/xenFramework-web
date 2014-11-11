@@ -17,8 +17,16 @@
 namespace com\daw\calculator;
 
 use bootstrap\AppBootstrap;
+use xen\mvc\view\Phtml;
 
 class Bootstrap extends AppBootstrap
 {
+    public function _initLayoutCalculadora()
+    {
+        $layout = $this->_container->getResource('View');
+        $partial = new Phtml('application/packages/com/daw/calculator/views/partials/main_calc.phtml');
+        $layout->addPartial('main_calc', $partial);
 
+        return $layout;
+    }
 }
