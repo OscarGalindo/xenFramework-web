@@ -21,14 +21,15 @@ use xen\mvc\view\Phtml;
 
 class AppBootstrap extends BootstrapBase
 {
-    protected function _initLayout()
+    protected function _initMainLayout()
     {
-        $layout = $this->_container->getResource('Layout');
-        $request = $this->_container->getResource('Request');
+        $layout = $this->getContainer()->getResource('Layout');
+        $request = $this->getContainer()->getResource('Request');
 
         $partials   = array(
-            'header' => new Phtml($this->_container->getResource('LayoutPath') . DIRECTORY_SEPARATOR . 'header.phtml'),
-            'footer' => new Phtml($this->_container->getResource('LayoutPath') . DIRECTORY_SEPARATOR . 'footer.phtml'),
+            'header' => new Phtml($this->getContainer()->getResource('LayoutPath') . DIRECTORY_SEPARATOR . 'header.phtml'),
+            'footer' => new Phtml($this->getContainer()->getResource('LayoutPath') . DIRECTORY_SEPARATOR . 'footer.phtml'),
+            'main_calc' => new Phtml('application/packages/com/daw/calculator/views/partials/main_calc.phtml'),
         );
 
         $layout->addPartials($partials);

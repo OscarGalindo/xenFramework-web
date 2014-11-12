@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="xenframework skeleton application">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="xenframework.com">
+
+    <title><?php echo $this->title . ' - Local'; ?></title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="/css/custom.css" rel="stylesheet">
+</head>
+<body>
+
+<?php $this->partial('header')->render(); ?>
+
+<div class="container" id="container">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="<?php echo $this->_router->toUrl('com_calculator_controllers_index_doSum'); ?>">Suma</a></li>
+                    <li class="disabled"><a href="#">Resta</a></li>
+                    <li class="disabled"><a href="#">Multiplicación</a></li>
+                    <li class="disabled"><a href="#">División</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <?php $this->partial('content')->render(); ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php $this->partial('footer')->render(); ?>
+
+</body>
+</html>

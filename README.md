@@ -1,1 +1,0 @@
-For more information go to [xenFramework](https://github.com/xenframework)

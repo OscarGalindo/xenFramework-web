@@ -14,6 +14,8 @@
  * file that was distributed with this source code.
  */
 return array(
-    'mvc'       => array(),
+    'mvc'       => array(
+        'layoutPath'    => 'application/packages/com/daw/calculator/layouts/default',
+    ),
     'package'   => array(),
 );
