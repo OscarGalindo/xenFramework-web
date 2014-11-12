@@ -14,13 +14,31 @@ class IndexController extends Controller
 {
     public function indexAction()
     {
-        $this->_layout->title = 'Index calculadora';
+        $this->_layout->title = 'Index calculator';
         $this->render();
     }
 
     public function addAction()
     {
-        $this->_layout->title = 'Suma';
+        $this->_layout->title = 'Add';
+        $this->render();
+    }
+
+    public function subtractAction()
+    {
+        $this->_layout->title = 'Subtract';
+        $this->render();
+    }
+
+    public function multiplicationAction()
+    {
+        $this->_layout->title = 'Multiplication';
+        $this->render();
+    }
+
+    public function divisionAction()
+    {
+        $this->_layout->title = 'Division';
         $this->render();
     }
 }

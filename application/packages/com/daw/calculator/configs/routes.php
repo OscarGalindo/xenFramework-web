@@ -31,9 +31,24 @@ return array(
         'controller'        => 'index',
         'action'            => 'index',
     ),
-    'com_calculator_controllers_index_doSum' => array(
+    'com_calculator_controllers_index_add' => array(
         'path'              => '/calculator/add',
         'controller'        => 'index',
         'action'            => 'add',
+    ),
+    'com_calculator_controllers_index_subtract' => array(
+        'path'              => '/calculator/subtract',
+        'controller'        => 'index',
+        'action'            => 'subtract',
+    ),
+    'com_calculator_controllers_index_multiplication' => array(
+        'path'              => '/calculator/multiplication',
+        'controller'        => 'index',
+        'action'            => 'multiplication',
+    ),
+    'com_calculator_controllers_index_division' => array(
+        'path'              => '/calculator/division',
+        'controller'        => 'index',
+        'action'            => 'division',
     ),
 );
