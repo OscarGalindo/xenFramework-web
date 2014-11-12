@@ -10,12 +10,16 @@
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link href="/css/custom.css" rel="stylesheet">
+
+    <script type="text/javascript" src="/vendor/angular/angular.js"></script>
+    <script type="text/javascript" src="/js/xen.app.js"></script>
+    <script type="text/javascript" src="/js/calculator.controller.js"></script>
 </head>
 <body>
 
 <?php $this->partial('header')->render(); ?>
 
-<div class="container" id="container">
+<div class="container" id="container" ng-app="xenApp">
     <div class="page-header">
         <div class="row">
             <div class="col-md-3">
@@ -26,7 +30,7 @@
                     <li class="disabled"><a href="#">División</a></li>
                 </ul>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9" ng-controller="CalculatorCtrl">
                 <?php $this->partial('content')->render(); ?>
             </div>
         </div>
