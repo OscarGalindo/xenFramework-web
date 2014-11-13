@@ -9,36 +9,41 @@
 namespace com\daw\calculator\controllers;
 
 use xen\mvc\Controller;
+use xen\mvc\view\Phtml;
 
 class IndexController extends Controller
 {
+    public function init()
+    {
+        $accion = $this->getRequest()->getAction();
+        $partial = new Phtml('application/packages/com/daw/calculator/views/helpers/main_calc.phtml');
+        $partial->title = $partial->button = $this->_layout->title = ucfirst($accion);
+        $this->_view->addPartial($accion, $partial);
+    }
+
     public function indexAction()
     {
-        $this->_layout->title = 'Index calculator';
+        $this->_layout->title = 'Index calculadora';
         $this->render();
     }
 
     public function addAction()
     {
-        $this->_layout->title = 'Add';
         $this->render();
     }
 
     public function subtractAction()
     {
-        $this->_layout->title = 'Subtract';
         $this->render();
     }
 
     public function multiplicationAction()
     {
-        $this->_layout->title = 'Multiplication';
         $this->render();
     }
 
     public function divisionAction()
     {
-        $this->_layout->title = 'Division';
         $this->render();
     }
 }
