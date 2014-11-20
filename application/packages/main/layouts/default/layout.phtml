@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="xenframework.com">
 
-    <title><?php echo $this->title . ' - Local'; ?></title>
+    <title><?php echo ($this->title) ? $this->title.' - ' : ''; ?>Local</title>
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link href="/css/custom.css" rel="stylesheet">

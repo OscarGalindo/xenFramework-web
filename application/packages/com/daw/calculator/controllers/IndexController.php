@@ -16,7 +16,7 @@ class IndexController extends Controller
     public function init()
     {
         $accion = $this->getRequest()->getAction();
-        $partial = new Phtml('application/packages/com/daw/calculator/views/helpers/main_calc.phtml');
+        $partial = new Phtml('application/packages/com/daw/calculator/views/partial/main_calc.phtml');
         $partial->title = $this->_layout->title = ucfirst($accion);
         $partial->button = 'Do ' . $accion;
         $this->_view->addPartial($accion, $partial);
