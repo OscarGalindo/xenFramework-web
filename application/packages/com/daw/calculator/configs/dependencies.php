@@ -49,4 +49,8 @@
  *      ),
  * )
  */
-return array();
+return array(
+    'com\\daw\\calculator\\controllers\\IndexController' => array(
+        'model' => 'com\\daw\\calculator\\models\\CalculatorModel'
+    )
+);

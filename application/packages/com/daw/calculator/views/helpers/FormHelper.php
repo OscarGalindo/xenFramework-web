@@ -27,6 +27,7 @@ class FormHelper extends ViewHelper
      * $params['buttonValue']
      * $params['controls'] = array(array ('field'  => String
      *                                    'type'   => [number, email, date, hidden, ...]
+     * $params['ngmodel']
      * ))
      */
     protected function _html()
@@ -34,25 +35,25 @@ class FormHelper extends ViewHelper
         $this->_html = '
             <form
                 class="form-horizontal"
-                role="form"
-                action="'   . $this->_params['action'] . '"
                 id="'       . $this->_params['id'] . '"
-                method="'   . $this->_params['method'] . '">';
+                method="'   . $this->_params['method'] . '"
+                ng-submit="calcSubmit()">';
         foreach ($this->_params['controls'] as $control) {
             $this->_html .= '<div class="form-group">
                                 <label for="input_' . $control['field'] . '"
                                 class="col-sm-2 control-label">' . $control['field'] . '</label>
                                 <div class="col-sm-10">
                                   <input
-                                    type="' . $control['type'] . '" name="' . $control['field'] . '" class="form-control"
+                                    type="' . $control['type'] . '" ng-model="calc.' . $control['ngmodel'] . '" name="' . $control['field'] . '" class="form-control"
                                     id="input' . $control['field'] . '" placeholder="' . $control['field'] . '">
                                 </div>
                               </div>';
         }
         $this->_html .= '
+            <input type="hidden" name="calc.action" ng-init="calc.action=\'' . $this->_params['action'] . '\'" />
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-default btn-sm">' . $this->_params['buttonValue'] . '</button>
+                  <button type="submit" class="btn btn-default btn-sm" ng-click="doCalc()">' . $this->_params['buttonValue'] . '</button>
                 </div>
             </div>
         </form>

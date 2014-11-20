@@ -51,4 +51,9 @@ return array(
         'controller'        => 'index',
         'action'            => 'division',
     ),
+    'domultiplication' => array(
+        'path' => '/calculator/domultiplication',
+        'controller' => 'index',
+        'action' => 'domultiplication'
+    )
 );

@@ -30,7 +30,7 @@
                     <li <?php echo ($this->url == $this->_router->toUrl('com_calculator_controllers_index_division')) ? ' class="active"' : ''; ?>><a href="<?php echo $this->_router->toUrl('com_calculator_controllers_index_division'); ?>">Division</a></li>
                 </ul>
             </div>
-            <div class="col-md-9" ng-controller="CalculatorCtrl">
+            <div class="col-md-9">
                 <?php $this->partial('content')->render(); ?>
             </div>
         </div>

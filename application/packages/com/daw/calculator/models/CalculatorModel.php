@@ -14,13 +14,19 @@ class CalculatorModel {
     private $op2;
     private $result = 0;
 
-    function __construct($op1, $op2)
-    {
-        $this->op1 = $op1;
-        $this->op2 = $op2;
-    }
-
     public function add()
+    {
+        $this->result = $this->op1 + $this->op2;
+    }
+    public function multiplication()
+    {
+        $this->result = $this->op1 + $this->op2;
+    }
+    public function division()
+    {
+        $this->result = $this->op1 + $this->op2;
+    }
+    public function subtract()
     {
         $this->result = $this->op1 + $this->op2;
     }
