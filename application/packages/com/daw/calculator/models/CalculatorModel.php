@@ -20,15 +20,15 @@ class CalculatorModel {
     }
     public function multiplication()
     {
-        $this->result = $this->op1 + $this->op2;
+        $this->result = $this->op1 * $this->op2;
     }
     public function division()
     {
-        $this->result = $this->op1 + $this->op2;
+        $this->result = $this->op1 / $this->op2;
     }
     public function subtract()
     {
-        $this->result = $this->op1 + $this->op2;
+        $this->result = $this->op1 - $this->op2;
     }
 
     /**

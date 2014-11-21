@@ -50,7 +50,7 @@
  * )
  */
 return array(
-    'com\\daw\\calculator\\controllers\\IndexController' => array(
+    'com\\daw\\calculator\\controllers\\ResponseController' => array(
         'model' => 'com\\daw\\calculator\\models\\CalculatorModel'
     )
 );

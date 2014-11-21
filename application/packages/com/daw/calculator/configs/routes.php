@@ -51,9 +51,12 @@ return array(
         'controller'        => 'index',
         'action'            => 'division',
     ),
-    'domultiplication' => array(
-        'path' => '/calculator/domultiplication',
-        'controller' => 'index',
-        'action' => 'domultiplication'
+    'com_calculator_controllers_response_do' => array(
+        'path' => '/calculator/{action}/do',
+        'controller' => 'response',
+        'action' => 'do',
+        'constraints' => array(
+            'action' => '.*?'
+        )
     )
 );

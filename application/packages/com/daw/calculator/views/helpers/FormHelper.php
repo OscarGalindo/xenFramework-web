@@ -50,7 +50,7 @@ class FormHelper extends ViewHelper
                               </div>';
         }
         $this->_html .= '
-            <input type="hidden" name="calc.action" ng-init="calc.action=\'' . $this->_params['action'] . '\'" />
+            <input type="hidden" name="calc.action" ng-init="calc.action=\'' . $this->_params['action'] . '/do\'" />
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                   <button type="submit" class="btn btn-default btn-sm" ng-click="doCalc()">' . $this->_params['buttonValue'] . '</button>
